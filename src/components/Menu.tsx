@@ -1,29 +1,40 @@
 import React from 'react';
-import { IonButtons, IonContent, IonHeader, IonMenu, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import Tabs from './Tabs';
+import {
+  IonButtons,
+  IonContent,
+  IonHeader,
+  IonMenu,
+  IonMenuButton,
+  IonPage,
+  IonTitle,
+  IonToolbar,
+} from '@ionic/react';
+import Tabs from '@/components/Tabs';
 function Menu() {
   return (
     <>
-      <IonMenu contentId="main-content">
+      <IonMenu contentId='main-content'>
         <IonHeader>
           <IonToolbar>
             <IonTitle>Menu Content</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <IonContent className="ion-padding">This is the menu content.
-        <Tabs />
+        <IonContent className='ion-padding'>
+          This is the menu content.
         </IonContent>
       </IonMenu>
-      <IonPage id="main-content">
+      <IonPage id='main-content'>
         <IonHeader>
           <IonToolbar>
-            <IonButtons slot="start">
+            <IonButtons slot='start'>
               <IonMenuButton></IonMenuButton>
             </IonButtons>
             <IonTitle>Menu testing Ivan</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <IonContent className="ion-padding">Tap the button in the toolbar to open the menu.</IonContent>
+        <IonContent className='ion-padding'>
+          <Tabs />
+        </IonContent>
       </IonPage>
     </>
   );
