@@ -1,4 +1,8 @@
 import React from 'react';
+import { IonIcon, IonText } from '@ionic/react';
+import { link, logoIonic, notifications, notificationsOffCircleOutline, notificationsOffOutline } from 'ionicons/icons';
+
+import { IonAccordion, IonAccordionGroup, IonItem, IonLabel } from '@ionic/react';
 import {
   IonButtons,
   IonContent,
@@ -10,9 +14,17 @@ import {
   IonToolbar,
 } from '@ionic/react';
 import Tabs from '@/components/Tabs';
+
 function Menu() {
+  const handleClick = () => {
+    // Aquí puedes realizar la acción que desees al hacer clic en el texto
+    console.log('Texto clickeado');
+    <link rel="stylesheet" href="/tab3" />
+    // Por ejemplo, puedes ejecutar una función o navegar a otra página
+  };
   return (
     <>
+    
       <IonMenu contentId='main-content'>
         <IonHeader>
           <IonToolbar>
@@ -20,15 +32,68 @@ function Menu() {
           </IonToolbar>
         </IonHeader>
         <IonContent className='ion-padding'>
-          This is the menu content.
+        <IonAccordionGroup>
+      <IonAccordion value="first">
+        <IonItem slot="header" color="light">
+          <IonLabel>Alcaldía</IonLabel>
+        </IonItem>
+        <div className="ion-padding" slot="content">
+        <IonText onClick={handleClick} style={{ cursor: 'pointer' }}>
+        Secretaría de Gobierno
+        </IonText>
+        </div>
+        <div className="ion-padding" slot="content">
+        <IonText onClick={handleClick} style={{ cursor: 'pointer' }}>
+        Secretaría de Educación
+        </IonText>
+        </div>
+        <div className="ion-padding" slot="content">
+        <IonText onClick={handleClick} style={{ cursor: 'pointer' }}>
+        Secretaría de Cultura y Deporte
+        </IonText>
+        </div>
+      </IonAccordion>
+      <IonAccordion value="second">
+        <IonItem slot="header" color="light">
+          <IonLabel>Camara de comercio</IonLabel>
+        </IonItem>
+        <div className="ion-padding" slot="content">
+        Registro Mercantil
+        </div>
+        <div className="ion-padding" slot="content">
+        Asesoría Empresarial
+        </div>
+        <div className="ion-padding" slot="content">
+        Estadísticas y Estudios Económicos
+        </div>
+      </IonAccordion>
+      <IonAccordion value="third">
+        <IonItem slot="header" color="light">
+          <IonLabel>Bomberos</IonLabel>
+        </IonItem>
+        <div className="ion-padding" slot="content">
+        
+        </div>
+      </IonAccordion>
+      <IonAccordion value="ford">
+        <IonItem slot="header" color="light">
+          <IonLabel>Policía</IonLabel>
+        </IonItem>
+        <div className="ion-padding" slot="content">
+         
+        </div>
+      </IonAccordion>
+    </IonAccordionGroup>
         </IonContent>
       </IonMenu>
+     
       <IonPage id='main-content'>
         <IonHeader>
           <IonToolbar>
             <IonButtons slot='start'>
               <IonMenuButton></IonMenuButton>
             </IonButtons>
+            <IonIcon icon={notifications} size="large" slot='end'></IonIcon>
             <IonTitle>Menu testing Ivan</IonTitle>
           </IonToolbar>
         </IonHeader>
