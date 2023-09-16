@@ -25,7 +25,7 @@ export default function Tab3() {
           <IonLabel>Morrocoy</IonLabel>
         </IonItem>
         <div className="ion-padding" slot="content">
-          <img src="src\assets\hoteles\hotelmorrocoy.jpg" alt="" />
+          <img src="src\assets\hoteles\Morrocoy\hotelmorrocoy.jpg" alt="" />
         </div>
       </IonAccordion>
 
