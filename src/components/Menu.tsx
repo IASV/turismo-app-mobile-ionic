@@ -39,6 +39,7 @@ function Menu() {
         </IonItem>
         <div className="ion-padding" slot="content">
         <IonText onClick={handleClick} style={{ cursor: 'pointer' }}>
+          <a href="#">Secretaria</a>
         Secretaría de Gobierno
         </IonText>
         </div>
