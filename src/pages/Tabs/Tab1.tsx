@@ -1,6 +1,10 @@
-import React, { useRef, useEffect } from 'react';
-import { IonAccordion, IonAccordionGroup, IonItem, IonLabel } from '@ionic/react';
-
+import React, { useRef, useEffect } from "react";
+import {
+  IonAccordion,
+  IonAccordionGroup,
+  IonItem,
+  IonLabel,
+} from "@ionic/react";
 
 export default function Tab1() {
   const accordionGroup = useRef<null | HTMLIonAccordionGroupElement>(null);
@@ -10,7 +14,7 @@ export default function Tab1() {
       return;
     }
 
-    accordionGroup.current.value = ['first', 'third'];
+    accordionGroup.current.value = ["first", "third"];
   }, []);
 
   return (
@@ -19,16 +23,26 @@ export default function Tab1() {
         <IonItem slot="header" color="light">
           <IonLabel>Pizzerias</IonLabel>
         </IonItem>
-        <div className="ion-padding" slot="content">
-          First Content
+        <div className="ion-padding" slot="content"> 
+          <ul>
+            <li>M&M PIZZA</li>
+            <li>Rustica</li>
+            <li>Roma's Pizza</li>
+            <li>Pizza Ariel</li>
+          </ul>
         </div>
       </IonAccordion>
       <IonAccordion value="second">
         <IonItem slot="header" color="light">
           <IonLabel>Restaurantes</IonLabel>
         </IonItem>
-        <div className="ion-padding" slot="content">
-          Second Content
+        <div className="ion-padding" slot="content"> 
+          <ul>
+            <li>La Brasa</li>
+            <li>La Biela</li>
+            <li>El rancho</li>
+            <li>Carnivore</li>
+          </ul>
         </div>
       </IonAccordion>
 
@@ -36,8 +50,13 @@ export default function Tab1() {
         <IonItem slot="header" color="light">
           <IonLabel>Comidas Rapidas</IonLabel>
         </IonItem>
-        <div className="ion-padding" slot="content">
-          Third Content
+        <div className="ion-padding" slot="content"> 
+          <ul>
+            <li>La prima</li>
+            <li>La cuñada</li>
+            <li>Donde Chuz</li>
+            <li>El viejo Hermides</li>
+          </ul>
         </div>
       </IonAccordion>
 
@@ -45,8 +64,13 @@ export default function Tab1() {
         <IonItem slot="header" color="light">
           <IonLabel>Heladerias</IonLabel>
         </IonItem>
-        <div className="ion-padding" slot="content">
-          Third Content
+        <div className="ion-padding" slot="content"> 
+          <ul>
+            <li>Puggin</li>
+            <li>Arrecife</li>
+            <li>Popsy</li>
+            <li>Los de la sexta</li>
+          </ul>
         </div>
       </IonAccordion>
 
@@ -54,12 +78,14 @@ export default function Tab1() {
         <IonItem slot="header" color="light">
           <IonLabel>Licores & Bebidas</IonLabel>
         </IonItem>
-        <div className="ion-padding" slot="content">
-          Third Content
+        <div className="ion-padding" slot="content"> 
+          <ul>
+            <li>Estanco coyote</li>
+            <li>EL pingüino</li>
+            <li>Estadero la 25</li>
+          </ul>
         </div>
       </IonAccordion>
-
-
     </IonAccordionGroup>
   );
 }

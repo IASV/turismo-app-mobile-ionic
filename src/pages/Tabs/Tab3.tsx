@@ -6,6 +6,21 @@ import {
   IonLabel,
   IonImg,
 } from "@ionic/react";
+import { HotelView } from "./HotelView";
+
+import mfachada from "../../assets/hoteles/Morrocoy/hotelmorrocoy.jpg";
+import mrecepcion from "../../assets/hoteles/Morrocoy/hotelmorrocy-recepcion.jpg";
+import mhabitacion from "../../assets/hoteles/Morrocoy/hotelmorrocoy-habitacion.png";
+
+import dfachada from "../../assets/hoteles/deLeon/Hoteldeleon.jpg";
+import drecepcion from "../../assets/hoteles/deLeon/hoteldeleon-recepcion.jpg";
+import dhabitacion from "../../assets/hoteles/deLeon/hoteldeleon-habitacion.jpg";
+
+import efachada from "../../assets/hoteles/Estoraques/hotelestoraque.png";
+import erecepcion from "../../assets/hoteles/Estoraques/hotelestoraque-recepcion.png";
+import ehabitacion from "../../assets/hoteles/Estoraques/hotelestoraque-habitacion.png";
+
+
 
 export default function Tab3() {
   const accordionGroup = useRef<null | HTMLIonAccordionGroupElement>(null);
@@ -25,7 +40,12 @@ export default function Tab3() {
           <IonLabel>Morrocoy</IonLabel>
         </IonItem>
         <div className="ion-padding" slot="content">
-          <img src="src\assets\hoteles\Morrocoy\hotelmorrocoy.jpg" alt="" />
+          <HotelView
+            title="HOTEL MORROCOY"
+            img1={mfachada}
+            img2={mrecepcion}
+            img3={mhabitacion}
+          />
         </div>
       </IonAccordion>
 
@@ -34,7 +54,12 @@ export default function Tab3() {
           <IonLabel>De Leon</IonLabel>
         </IonItem>
         <div className="ion-padding" slot="content">
-          Second Content
+          <HotelView
+            title="HOTEL D LEON"
+            img1={dfachada}
+            img2={drecepcion}
+            img3={dhabitacion}
+          />
         </div>
       </IonAccordion>
 
@@ -43,10 +68,14 @@ export default function Tab3() {
           <IonLabel>Los Estoraques</IonLabel>
         </IonItem>
         <div className="ion-padding" slot="content">
-          Third Content
+          <HotelView
+            title="HOTEL ESTORAQUES"
+            img1={efachada}
+            img2={erecepcion}
+            img3={ehabitacion}
+          />
         </div>
       </IonAccordion>
-      
     </IonAccordionGroup>
   );
 }

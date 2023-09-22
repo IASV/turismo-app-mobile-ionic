@@ -11,6 +11,10 @@ import {
   IonCardTitle,
 } from "@ionic/react";
 
+import alemana from "../../assets/droguerias/alemana.jpg";
+import curita from "../../assets/droguerias/curita.png";
+import paguemenos from "../../assets/droguerias/paguemenos.jpg";
+
 export default function Tab4() {
   const accordionGroup = useRef<null | HTMLIonAccordionGroupElement>(null);
 
@@ -30,14 +34,17 @@ export default function Tab4() {
         </IonItem>
         <div className="ion-padding" slot="content">
           <IonCard>
+            <h1 style={{ textAlign: "center" }}>Pague menos</h1>
+            <center>
+              <img alt="Silhouette of mountains" src={paguemenos} />
+            </center>
             <IonCardHeader>
-              <IonCardTitle>Calle 20 #4a-33</IonCardTitle>
-              <IonCardSubtitle>+57 3145342702</IonCardSubtitle>
+              <IonCardTitle>Cll 5 # 17-90, Aguachica, Colombia, 205010</IonCardTitle>
+              <IonCardSubtitle>3172937323</IonCardSubtitle>
             </IonCardHeader>
 
             <IonCardContent>
-              lunes a viernes :8am - 8pm <hr />
-              sabados y festivos: 10am-5pm
+              lunes a domingo 24/7
             </IonCardContent>
           </IonCard>
         </div>
@@ -48,14 +55,18 @@ export default function Tab4() {
         </IonItem>
         <div className="ion-padding" slot="content">
           <IonCard>
+            <h1 style={{ textAlign: "center" }}>Alemana</h1>
+            <center>
+              <img alt="Silhouette of mountains" src={alemana} />
+            </center>
             <IonCardHeader>
-              <IonCardTitle>Calle 20 #4a-33</IonCardTitle>
-              <IonCardSubtitle>+57 3145342702</IonCardSubtitle>
+              <IonCardTitle>Cl. 5 #12-03</IonCardTitle>
+              <IonCardSubtitle>318 3728787</IonCardSubtitle>
             </IonCardHeader>
 
             <IonCardContent>
-              lunes a viernes :8am - 8pm <hr />
-              sabados y festivos: 10am-5pm
+              lunes a viernes :7 am - 10 pm <hr />
+              sabados y festivos: 7:30 am - 9:30 pm
             </IonCardContent>
           </IonCard>
         </div>
@@ -66,14 +77,18 @@ export default function Tab4() {
         </IonItem>
         <div className="ion-padding" slot="content">
           <IonCard>
+          <h1 style={{ textAlign: "center" }}>La curita plus</h1>
+            <center>
+              <img alt="Silhouette of mountains" src={curita} />
+            </center>
             <IonCardHeader>
-              <IonCardTitle>Calle 20 #4a-33</IonCardTitle>
-              <IonCardSubtitle>+57 3145342702</IonCardSubtitle>
+              <IonCardTitle>Cll 5 # 22-85, Aguachica, Colombia</IonCardTitle>
+              <IonCardSubtitle>321 6289309</IonCardSubtitle>
             </IonCardHeader>
 
             <IonCardContent>
-              lunes a viernes :8am - 8pm <hr />
-              sabados y festivos: 10am-5pm
+              lunes a viernes :7 am - 10 pm <hr />
+              sabados y festivos: 7 am-10 pm
             </IonCardContent>
           </IonCard>
         </div>

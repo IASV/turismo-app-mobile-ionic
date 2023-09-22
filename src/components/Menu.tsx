@@ -34,7 +34,7 @@ function Menu() {
     <>
       <IonMenu contentId="main-content">
         <IonHeader>
-          <IonToolbar>
+          <IonToolbar color="primary">
             <IonTitle>Menu Content</IonTitle>
           </IonToolbar>
         </IonHeader>
@@ -74,13 +74,11 @@ function Menu() {
                 <IonLabel>Camara de comercio</IonLabel>
               </IonItem>
               <div className="ion-padding" slot="content">
-                Registro Mercantil
-              </div>
-              <div className="ion-padding" slot="content">
-                Asesoría Empresarial
-              </div>
-              <div className="ion-padding" slot="content">
-                Estadísticas y Estudios Económicos
+                <a href="/menu-camara-comercio">
+                  <IonText  style={{ cursor: "pointer" }}>
+                    Cámara de comercio
+                  </IonText>
+                </a>
               </div>
             </IonAccordion>
             
@@ -88,13 +86,25 @@ function Menu() {
               <IonItem slot="header" color="light">
                 <IonLabel>Bomberos</IonLabel>
               </IonItem>
-              <div className="ion-padding" slot="content"></div>
+              <div className="ion-padding" slot="content">
+                <a href="/menu-bomberos">
+                  <IonText  style={{ cursor: "pointer" }}>
+                    Bomberos
+                  </IonText>
+                </a>
+              </div>
             </IonAccordion>
             <IonAccordion value="ford">
               <IonItem slot="header" color="light">
                 <IonLabel>Policía</IonLabel>
               </IonItem>
-              <div className="ion-padding" slot="content"></div>
+              <div className="ion-padding" slot="content">
+                <a href="/menu-policia">
+                  <IonText  style={{ cursor: "pointer" }}>
+                    Policía
+                  </IonText>
+                </a>
+              </div>
             </IonAccordion>
           </IonAccordionGroup>
         </IonContent>
@@ -102,12 +112,12 @@ function Menu() {
 
       <IonPage id="main-content">
         <IonHeader>
-          <IonToolbar>
+          <IonToolbar color="primary">
             <IonButtons slot="start">
               <IonMenuButton></IonMenuButton>
             </IonButtons>
             <IonIcon icon={notifications} size="large" slot="end"></IonIcon>
-            <IonTitle>Menu testing Ivan</IonTitle>
+            <IonTitle>Menu principal</IonTitle>
           </IonToolbar>
         </IonHeader>
         <IonContent className="ion-padding">

@@ -53,6 +53,9 @@ import "@ionic/react/css/display.css";
 /* Theme variables */
 import "../theme/variables.css";
 import Main from "@/pages/Main";
+import CamaraComercio from "@/pages/Camaras/CamaraComercio";
+import Bomberos from "@/pages/Bomberos/Bomberos";
+import Policia from "@/pages/Policia/Policia";
 
 
 
@@ -92,6 +95,18 @@ function Tabs() {
 
             <Route path="/menu-alcaldia-cyd">
             <SecretariaCulturayDeporte/>
+            </Route>
+
+            <Route path="/menu-camara-comercio">
+            <CamaraComercio/>
+            </Route>
+
+            <Route path="/menu-bomberos">
+            <Bomberos/>
+            </Route>
+
+            <Route path="/menu-policia">
+            <Policia/>
             </Route>
 
 
